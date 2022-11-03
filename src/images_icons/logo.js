@@ -1,6 +1,8 @@
+import "./svg.css";
 function Logo() {
   return (
     <svg
+      className="logo"
       xmlns="http://www.w3.org/2000/svg"
       width="97.311"
       height="77.837"

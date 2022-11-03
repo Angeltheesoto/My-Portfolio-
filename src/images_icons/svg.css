@@ -1,0 +1,16 @@
+.logo {
+  width: 4rem;
+  padding-left: 10px;
+  margin-right: -10px;
+}
+
+.socials {
+  width: 2rem;
+}
+
+@media screen and (min-width: 1300px) {
+  .socials {
+    width: 4rem;
+    margin-left: -1rem;
+  }
+}

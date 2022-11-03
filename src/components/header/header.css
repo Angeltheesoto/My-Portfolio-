@@ -1,0 +1,30 @@
+.navbar-container {
+  background-color: #061d3a;
+}
+
+.nav-center {
+  margin: 0 auto;
+  font-size: 1.5rem;
+}
+
+@media screen and (min-width: 1300px) {
+  .nav-center {
+    font-size: 3rem;
+  }
+}
+
+.hero-container {
+  display: flex;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+.hero-container a {
+  max-width: 4rem;
+}
+
+.hero-text {
+  text-align: center;
+  align-content: center;
+  padding: 1rem;
+}

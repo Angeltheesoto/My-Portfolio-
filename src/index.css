@@ -1,0 +1,33 @@
+body {
+  background-color: #061d3a;
+}
+
+h1 {
+  font-size: 4rem;
+  color: white;
+}
+
+h2 {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  color: lightgray;
+  font-size: 1rem;
+}
+
+h4 {
+  color: #061d3a;
+  font-size: 3rem;
+}
+
+p {
+  color: white;
+}
+
+.leaflet-container {
+  width: 100vw;
+  height: 30rem;
+}
