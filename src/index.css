@@ -27,7 +27,21 @@ p {
   color: white;
 }
 
+.app-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .leaflet-container {
-  width: 100vw;
   height: 30rem;
+}
+
+@media screen and (min-width: 992px) {
+  .header-container {
+    display: flex;
+    max-height: 50rem;
+  }
+  .box-container {
+    width: 60rem;
+  }
 }

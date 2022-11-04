@@ -6,7 +6,7 @@
 }
 
 .info-container2 {
-  padding: 3rem 4rem;
+  padding: 0 4rem 3rem 4rem;
   z-index: 9999;
 }
 
@@ -35,4 +35,25 @@
 
 .Orbs {
   max-width: 110vw;
+}
+
+@media screen and (min-width: 992px) {
+  .Orbs {
+    max-height: 50rem;
+    max-width: 100%;
+  }
+  .info-container {
+    margin-top: 0;
+  }
+  .orbs-c-2 {
+    margin-top: 0;
+  }
+
+  .Orbs2 {
+    width: 57rem;
+  }
+
+  .info-container2 {
+    padding: 3rem 4rem;
+  }
 }

@@ -1,4 +1,30 @@
 .form-container {
+  width: 100%;
   padding: 3rem;
   background-color: white;
+}
+
+.form-flex {
+  display: flex;
+}
+
+.footer-links {
+  display: none;
+  width: 50%;
+  padding: 3rem 4rem;
+  background-color: white;
+}
+
+.profilepic {
+  width: 100%;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 992px) {
+  .form-container {
+    width: 50%;
+  }
+  .footer-links {
+    display: block;
+  }
 }
