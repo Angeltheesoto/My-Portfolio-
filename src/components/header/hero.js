@@ -9,13 +9,21 @@ function Hero() {
   return (
     <Container className="hero-container">
       <Nav defaultActiveKey="/home" className="flex-column">
-        <Nav.Link href="/home">
+        <Nav.Link href="https://github.com/Angeltheesoto" target="_Blank">
           <GitHub />
         </Nav.Link>
-        <Nav.Link eventKey="link-1">
+        <Nav.Link
+          eventKey="link-1"
+          href="https://www.linkedin.com/in/angel-soto-a19a04233/"
+          target="_Blank"
+        >
           <LinkedIn />
         </Nav.Link>
-        <Nav.Link eventKey="link-2">
+        <Nav.Link
+          eventKey="link-2"
+          href="https://www.instagram.com/angeltheesoto/"
+          target="_Blank"
+        >
           <Instagram />
         </Nav.Link>
       </Nav>

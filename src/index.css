@@ -42,6 +42,6 @@ p {
     max-height: 50rem;
   }
   .box-container {
-    width: 60rem;
+    width: 100%;
   }
 }

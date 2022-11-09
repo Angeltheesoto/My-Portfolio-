@@ -1,11 +1,19 @@
 import "./main.css";
-import Orbs from "../../images_icons/Orbs.png";
 
 export default function Lava() {
   return (
     <div className="orbs-main-container">
       <div className="orbs-container">
-        <img src={Orbs} alt="lava" className="Orbs" />
+        <div class="gooey-container">
+          <div class="obj-1 goo"></div>
+          <div class="obj-2 goo"></div>
+          <div class="obj-3 goo"></div>
+          <div class="obj-4 goo"></div>
+          <div class="obj-5 goo"></div>
+          <div class="obj-6 goo"></div>
+          <div class="obj-7 goo"></div>
+          <div class="obj-8 goo"></div>
+        </div>
       </div>
     </div>
   );

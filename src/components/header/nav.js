@@ -16,13 +16,13 @@ function NavbarEl() {
             <Nav.Link href="#home" className="text-white">
               About{" "}
             </Nav.Link>
-            <Nav.Link href="#home" className="text-white">
+            <Nav.Link href="#skills" className="text-white">
               Skills
             </Nav.Link>
-            <Nav.Link href="#features" className="text-white">
+            <Nav.Link href="#contact" className="text-white">
               Contact
             </Nav.Link>
-            <Nav.Link href="#pricing" className="text-white">
+            <Nav.Link href="#projects" className="text-white">
               Projects
             </Nav.Link>
           </Nav>
