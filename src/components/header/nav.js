@@ -13,7 +13,7 @@ function NavbarEl() {
             <Logo />
           </Navbar.Brand>
           <Nav className="me-auto nav-center">
-            <Nav.Link href="#home" className="text-white">
+            <Nav.Link href="#about" className="text-white">
               About{" "}
             </Nav.Link>
             <Nav.Link href="#skills" className="text-white">
