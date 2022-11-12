@@ -9,9 +9,9 @@
 
 ## Technologies
 
--HTML | CSS
--JavaScritp | React
--Node.js
--Git
--React-Bootstrap
--Adobe XD
+*HTML | CSS
+*JavaScritp | React
+*Node.js
+*Git
+*React-Bootstrap
+*Adobe XD
