@@ -1,21 +1,12 @@
-# My-Portfolio-
+# My Portfolio Website
 
-Npm packages
-[npm i emailjs] used to send emails in the form.
+<!-- Npm packages
+[npm i emailjs] used to send emails in the form. -->
 
-<!-- Note -->
+[Angeltheesoto](angeltheesoto.com) is my personally web portfolio showcasing my skills, education and more. The website shows my ability to build a website from the ground up.
 
-.box-container, .info-container height 50rem - change height of text box and container
-.orbs-main-container height 48rem - where the balls are
-h1 fontsize: 7rem width 30rem - adjust the heading
+![angeltheesoto](./angeltheesoto.pdf)
 
-.header-container height 50rem
+## Technologies
 
-fix:
-.orbs-main-container {
-max-width: 40rem;
-height: 48rem
-}
-.gooey-container{
-max-width: 40rem;
-}
+-
