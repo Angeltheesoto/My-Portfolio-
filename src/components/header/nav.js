@@ -3,8 +3,9 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Logo from "../../images_icons/logo";
 import "./header.css";
+import { Link } from "react-scroll";
 
-function NavbarEl() {
+export default function NavbarEl() {
   return (
     <>
       <Navbar className="navbar-container">
@@ -13,17 +14,25 @@ function NavbarEl() {
             <Logo />
           </Navbar.Brand>
           <Nav className="me-auto nav-center">
-            <Nav.Link href="#about" className="text-white">
-              About{" "}
-            </Nav.Link>
+            <Link to="about" spy={true} smooth={true} offset={-400}>
+              <Nav.Link href="#about" className="text-white">
+                About{" "}
+              </Nav.Link>
+            </Link>
             <Nav.Link href="#skills" className="text-white">
-              Skills
+              <Link to="skills" spy={true} smooth={true} offset={-400}>
+                Skills
+              </Link>
             </Nav.Link>
             <Nav.Link href="#projects" className="text-white">
-              Projects
+              <Link to="projects" spy={true} smooth={true} offset={-400}>
+                Projects
+              </Link>
             </Nav.Link>
             <Nav.Link href="#contact" className="text-white">
-              Contact
+              <Link to="contact" spy={true} smooth={true}>
+                Contact
+              </Link>
             </Nav.Link>
           </Nav>
         </Container>
@@ -31,5 +40,3 @@ function NavbarEl() {
     </>
   );
 }
-
-export default NavbarEl;

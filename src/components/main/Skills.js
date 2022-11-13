@@ -2,7 +2,7 @@ import "./main.css";
 
 export default function Skills() {
   return (
-    <div className="info-container pos-rel">
+    <div id="skills" className="info-container pos-rel">
       <h2>Skills</h2>
       <p>
         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy

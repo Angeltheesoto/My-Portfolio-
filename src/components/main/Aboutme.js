@@ -1,8 +1,8 @@
 import "./main.css";
 
-export default function Aboutme() {
+export default function Aboutme(props) {
   return (
-    <div className="orbs-main-container">
+    <div id="about" className="orbs-main-container">
       <div className="info-container ">
         <h2>About Me</h2>
         <p>

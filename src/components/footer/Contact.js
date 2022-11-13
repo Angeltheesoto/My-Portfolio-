@@ -25,7 +25,7 @@ function Contact() {
       });
   }
   return (
-    <div className="form-flex">
+    <div id="contact" className="form-flex">
       <div className="form-container">
         <h4>Contact me</h4>
         <Form onSubmit={sendEmail}>
