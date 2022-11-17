@@ -9,7 +9,11 @@ function Hero() {
   return (
     <Container className="hero-container">
       <Nav defaultActiveKey="/home" className="flex-column">
-        <Nav.Link href="https://github.com/Angeltheesoto" target="_Blank">
+        <Nav.Link
+          href="https://github.com/Angeltheesoto"
+          target="_Blank"
+          className="socials"
+        >
           <GitHub />
         </Nav.Link>
         <Nav.Link

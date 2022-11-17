@@ -8,9 +8,13 @@
   width: 2rem;
 }
 
-@media screen and (min-width: 1300px) {
+.socials:hover {
+  filter: url(#change-color);
+  transition: 1s;
+}
+
+@media screen and (min-width: 768px) {
   .socials {
     width: 4rem;
-    margin-left: -1rem;
   }
 }

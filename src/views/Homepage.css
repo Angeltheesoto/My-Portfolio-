@@ -12,3 +12,15 @@
   transform: none;
   visibility: visible;
 }
+
+.margin-bottom {
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+@media screen and (min-width: 992px) {
+  .margin-bottom {
+    flex-direction: inherit;
+  }
+}

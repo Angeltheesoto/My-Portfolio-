@@ -1,6 +1,6 @@
 import "./main.css";
 
-export default function Aboutme(props) {
+export default function Aboutme() {
   return (
     <div id="about" className="orbs-main-container">
       <div className="info-container ">

@@ -27,16 +27,20 @@
   padding: 1rem;
 }
 
-.text-white:hover {
-  font-weight: bold;
+.socials:hover {
+  transform: scale(1.1);
 }
 
 @media screen and (min-width: 992px) {
   .header-container {
     height: 50rem;
+    align-items: center;
   }
   .hero-container {
     height: 46rem;
+  }
+  .navbar-container {
+    margin-top: 3rem;
   }
 }
 
@@ -52,8 +56,23 @@
   }
 }
 
-/* @media screen and (min-width: 992px) {
-  .nav-center {
-    font-size: 3rem;
-  }
-} */
+/* link hover effect */
+.link-hover-effect {
+  position: relative;
+}
+
+.link-hover-effect:before {
+  content: "";
+  background: rgba(0, 212, 255, 1);
+  display: block;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+.link-hover-effect:hover::before {
+  width: 100%;
+}

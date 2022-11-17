@@ -8,6 +8,16 @@ function GitHub() {
       height="45.287"
       viewBox="0 0 46.448 45.287"
     >
+      <filter id="change-color">
+        <feColorMatrix
+          color-interpolation-filters="sRGB"
+          type="matrix"
+          values="0.32 0   0   0   0
+                  0   0.89  0   0   0
+                  0   0   1.00  0   0
+                  0   0   0   1   0 "
+        />
+      </filter>
       <path
         id="Icon_awesome-github"
         data-name="Icon awesome-github"
