@@ -47,15 +47,31 @@ function Homepage() {
     );
   };
 
+  const [isShown, setIsShown] = useState(false);
+
+  function HandleClick() {
+    // e.preventDefault();
+    setIsShown((prevIsShown) => !prevIsShown);
+    setTimeout(() => {
+      setIsShown((prevIsShown) => !prevIsShown);
+    }, 2000);
+    // console.log(isShown);
+  }
+
   return (
     <div className="app-container">
       <Container>
-        <div className="toast-container">
+        <div
+          className={
+            isShown ? "toast-container toast-transition" : "toast-container"
+          }
+        >
           <p className="toast-text">
             {`Yay! , your message was sent. \n I will respond as soon as I
             see it.`}
           </p>
         </div>
+
         <div className="header-container">
           <div className="box-container">
             <NavbarEl />
@@ -90,7 +106,10 @@ function Homepage() {
           <Lava />
         </div>
         <FadeInSection>
-          <Contact />
+          <Contact
+            HandleClick={HandleClick}
+            // onClick={(e) => e.preventDefault()}
+          />
           <Map />
         </FadeInSection>
       </Container>

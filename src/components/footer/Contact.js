@@ -7,17 +7,16 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import ProfilePic from "../../images_icons/picture_of_me.jpg";
 
-function Contact() {
+function Contact(props) {
   // Variables
   const [show, setShow] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [comment, setComment] = useState("");
 
-  // This handles submit form functions
+  // This function handles the email being sent and logs when it fails.
   function sendEmail(e) {
     e.preventDefault();
-
     if (name && email && comment) {
       emailjs
         .sendForm(
@@ -33,22 +32,43 @@ function Contact() {
           console.log(err);
         });
 
-      setShow((prevSetShow) => !prevSetShow);
+      // setShow((prevSetShow) => !prevSetShow);
+      // if (show === false) {
+      //   console.log("show is false");
+      // } else {
+      //   console.log("show is true");
+      // }
+    } else {
+      console.log("Cannot send email.");
+    }
+  }
 
-      if (show === false) {
-        console.log("show is false");
-      } else {
-        console.log("show is true");
-      }
-
+  // This function is the two submit buttons that display different effects in browser when clicked.
+  function SubmitButton() {
+    if (name && email && comment) {
+      // function EmailSent() {
+      //   console.log("This button is Not disabled");
+      // }
       return (
-        <Button type="submit" className="button btn-color">
+        <Button
+          type="submit"
+          className="button btn-color"
+          onClick={props.HandleClick}
+        >
           Send
         </Button>
       );
     } else {
+      // function EmailDidNotSend(e) {
+      //   e.preventDefault();
+      //   props.HandleClick;
+      // }
       return (
-        <Button type="submit" className="button btn-color" disabled>
+        <Button
+          type="submit"
+          className="button btn-color"
+          onClick={props.HandleClick}
+        >
           Send
         </Button>
       );
@@ -69,9 +89,9 @@ function Contact() {
           >
             <Form.Control
               type="text"
-              name="name"
+              name="name is-invalid"
               placeholder="Name"
-              maxLength={15}
+              maxLength={20}
             />
           </FloatingLabel>
 
@@ -86,7 +106,7 @@ function Contact() {
               type="email"
               name="user_email is-invalid"
               placeholder="name@example.com"
-              maxLength={20}
+              maxLength={25}
             />
           </FloatingLabel>
 
@@ -101,10 +121,7 @@ function Contact() {
               onChange={(e) => setComment(e.target.value)}
             />
           </FloatingLabel>
-
-          <Button type="submit" className="button btn-color">
-            Send
-          </Button>
+          <SubmitButton />
         </Form>
       </div>
       <div className="footer-links">
