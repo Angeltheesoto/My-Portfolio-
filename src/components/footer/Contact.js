@@ -54,20 +54,24 @@ function Contact(props) {
           type="submit"
           className="button btn-color"
           onClick={props.HandleClick}
+          // onSubmit={props.HandleClick}
         >
           Send
         </Button>
       );
     } else {
-      // function EmailDidNotSend(e) {
-      //   e.preventDefault();
-      //   props.HandleClick;
-      // }
+      function EmailDidNotSend(e) {
+        e.preventDefault();
+      }
       return (
         <Button
           type="submit"
           className="button btn-color"
-          onClick={props.HandleClick}
+          onClick={(e) => {
+            e.props.HandleDisabledClick;
+          }}
+          // onChange={(e) => e.preventDefault}
+          // onSubmit={EmailDidNotSend}
         >
           Send
         </Button>

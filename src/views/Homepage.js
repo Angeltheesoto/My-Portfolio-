@@ -48,13 +48,23 @@ function Homepage() {
   };
 
   const [isShown, setIsShown] = useState(false);
+  const [isShownTwo, setIsShownTwo] = useState(false);
 
-  function HandleClick() {
-    // e.preventDefault();
+  function HandleClick(e) {
+    e.preventDefault();
     setIsShown((prevIsShown) => !prevIsShown);
     setTimeout(() => {
       setIsShown((prevIsShown) => !prevIsShown);
-    }, 2000);
+    }, 4000);
+    // console.log(isShown);
+  }
+
+  function HandleDisabledClick(e) {
+    e.preventDefault();
+    setIsShownTwo((prevIsShown) => !prevIsShown);
+    setTimeout(() => {
+      setIsShownTwo((prevIsShown) => !prevIsShown);
+    }, 4000);
     // console.log(isShown);
   }
 
@@ -67,8 +77,18 @@ function Homepage() {
           }
         >
           <p className="toast-text">
-            {`Yay! , your message was sent. \n I will respond as soon as I
+            {`Yay! , your message was sent. I will respond as soon as I
             see it.`}
+          </p>
+        </div>
+
+        <div
+          className={
+            isShownTwo ? "toast-container toast-transition" : "toast-container"
+          }
+        >
+          <p className="toast-text">
+            {`Sorry, your email can't send because you are missing information.`}
           </p>
         </div>
 
@@ -108,7 +128,8 @@ function Homepage() {
         <FadeInSection>
           <Contact
             HandleClick={HandleClick}
-            // onClick={(e) => e.preventDefault()}
+            HandleDisabledClick={HandleDisabledClick}
+            onChange={(e) => e.preventDefault}
           />
           <Map />
         </FadeInSection>
