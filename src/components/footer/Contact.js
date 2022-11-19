@@ -1,15 +1,24 @@
 // dependencies
 import React, { useState, useEffect } from "react";
+
+// Emailjs npm
 import emailjs from "emailjs-com";
+
+// Css / imgs
 import "./footer.css";
+import ProfilePic from "../../images_icons/picture_of_me.jpg";
+
+// Bootstrap
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import ProfilePic from "../../images_icons/picture_of_me.jpg";
 
-function Contact(props) {
+// Toast npm
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+function Contact() {
   // Variables
-  const [show, setShow] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [comment, setComment] = useState("");
@@ -31,13 +40,6 @@ function Contact(props) {
         .catch((err) => {
           console.log(err);
         });
-
-      // setShow((prevSetShow) => !prevSetShow);
-      // if (show === false) {
-      //   console.log("show is false");
-      // } else {
-      //   console.log("show is true");
-      // }
     } else {
       console.log("Cannot send email.");
     }
@@ -46,33 +48,38 @@ function Contact(props) {
   // This function is the two submit buttons that display different effects in browser when clicked.
   function SubmitButton() {
     if (name && email && comment) {
-      // function EmailSent() {
-      //   console.log("This button is Not disabled");
-      // }
+      const notify = () => {
+        toast.success("Your message was successfully sent!", {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        });
+      };
       return (
-        <Button
-          type="submit"
-          className="button btn-color"
-          onClick={props.HandleClick}
-          // onSubmit={props.HandleClick}
-        >
+        <Button type="submit" className="button btn-color" onClick={notify}>
           Send
         </Button>
       );
     } else {
-      function EmailDidNotSend(e) {
-        e.preventDefault();
-      }
+      const notify = () => {
+        toast.error("Sorry, you must fill in all input fields.", {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        });
+      };
       return (
-        <Button
-          type="submit"
-          className="button btn-color"
-          onClick={(e) => {
-            e.props.HandleDisabledClick;
-          }}
-          // onChange={(e) => e.preventDefault}
-          // onSubmit={EmailDidNotSend}
-        >
+        <Button type="submit" className="button btn-color" onClick={notify}>
           Send
         </Button>
       );
@@ -93,7 +100,7 @@ function Contact(props) {
           >
             <Form.Control
               type="text"
-              name="name is-invalid"
+              name="name"
               placeholder="Name"
               maxLength={20}
             />
@@ -108,7 +115,7 @@ function Contact(props) {
           >
             <Form.Control
               type="email"
-              name="user_email is-invalid"
+              name="email"
               placeholder="name@example.com"
               maxLength={25}
             />
@@ -132,6 +139,19 @@ function Contact(props) {
         <h4>Profile</h4>
         <img src={ProfilePic} alt="angel soto" className="profilepic" />
       </div>
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        limit={1}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
     </div>
   );
 }

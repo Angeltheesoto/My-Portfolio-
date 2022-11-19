@@ -47,51 +47,9 @@ function Homepage() {
     );
   };
 
-  const [isShown, setIsShown] = useState(false);
-  const [isShownTwo, setIsShownTwo] = useState(false);
-
-  function HandleClick(e) {
-    e.preventDefault();
-    setIsShown((prevIsShown) => !prevIsShown);
-    setTimeout(() => {
-      setIsShown((prevIsShown) => !prevIsShown);
-    }, 4000);
-    // console.log(isShown);
-  }
-
-  function HandleDisabledClick(e) {
-    e.preventDefault();
-    setIsShownTwo((prevIsShown) => !prevIsShown);
-    setTimeout(() => {
-      setIsShownTwo((prevIsShown) => !prevIsShown);
-    }, 4000);
-    // console.log(isShown);
-  }
-
   return (
     <div className="app-container">
       <Container>
-        <div
-          className={
-            isShown ? "toast-container toast-transition" : "toast-container"
-          }
-        >
-          <p className="toast-text">
-            {`Yay! , your message was sent. I will respond as soon as I
-            see it.`}
-          </p>
-        </div>
-
-        <div
-          className={
-            isShownTwo ? "toast-container toast-transition" : "toast-container"
-          }
-        >
-          <p className="toast-text">
-            {`Sorry, your email can't send because you are missing information.`}
-          </p>
-        </div>
-
         <div className="header-container">
           <div className="box-container">
             <NavbarEl />
@@ -126,11 +84,7 @@ function Homepage() {
           <Lava />
         </div>
         <FadeInSection>
-          <Contact
-            HandleClick={HandleClick}
-            HandleDisabledClick={HandleDisabledClick}
-            onChange={(e) => e.preventDefault}
-          />
+          <Contact />
           <Map />
         </FadeInSection>
       </Container>
