@@ -12,9 +12,9 @@ function GitHub() {
         <feColorMatrix
           color-interpolation-filters="sRGB"
           type="matrix"
-          values="0.32 0   0   0   0
-                  0   0.89  0   0   0
-                  0   0   1.00  0   0
+          values=".98 0   0   0   0
+                  0   0  0   0   0
+                  0   0   0  0   0
                   0   0   0   1   0 "
         />
       </filter>

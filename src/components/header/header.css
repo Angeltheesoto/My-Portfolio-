@@ -68,7 +68,8 @@
 
 .link-hover-effect:before {
   content: "";
-  background: rgba(0, 212, 255, 1);
+  /* background: rgba(0, 212, 255, 1); */
+  background: red;
   display: block;
   position: absolute;
   bottom: -1px;

@@ -11,7 +11,6 @@ import ProfilePic from "../../images_icons/picture_of_me.jpg";
 // Bootstrap
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
 
 // Toast npm
 import { ToastContainer, toast } from "react-toastify";
@@ -40,6 +39,8 @@ function Contact() {
         .catch((err) => {
           console.log(err);
         });
+      e.target.reset();
+      setComment((prev) => (prev = ""));
     } else {
       console.log("Cannot send email.");
     }
@@ -61,13 +62,13 @@ function Contact() {
         });
       };
       return (
-        <Button type="submit" className="button btn-color" onClick={notify}>
+        <button type="submit" className="button btn-color" onClick={notify}>
           Send
-        </Button>
+        </button>
       );
     } else {
       const notify = () => {
-        toast.error("Sorry, you must fill in all input fields.", {
+        toast.error("Sorry, you must fill in all fields.", {
           position: "top-center",
           autoClose: 5000,
           hideProgressBar: false,
@@ -79,9 +80,9 @@ function Contact() {
         });
       };
       return (
-        <Button type="submit" className="button btn-color" onClick={notify}>
+        <button type="submit" className="button btn-color" onClick={notify}>
           Send
-        </Button>
+        </button>
       );
     }
   }
@@ -90,7 +91,7 @@ function Contact() {
     <div id="contact" className="form-flex">
       <div className="form-container">
         <h4>Contact me</h4>
-        <Form onSubmit={sendEmail}>
+        <Form onSubmit={sendEmail} method="post">
           <FloatingLabel
             controlId="floatingInput"
             label="Name"
@@ -117,7 +118,7 @@ function Contact() {
               type="email"
               name="email"
               placeholder="name@example.com"
-              maxLength={25}
+              maxLength={30}
             />
           </FloatingLabel>
 
