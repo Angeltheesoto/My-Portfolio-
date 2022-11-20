@@ -5,13 +5,15 @@ import "./index.css";
 
 // Components
 import Homepage from "./views/Homepage";
+import Essential from "./views/Essential";
 
 function App() {
   return (
     <div className="App">
       {
         <>
-          <Homepage />
+          {/* <Homepage /> */}
+          <Essential />
         </>
       }
     </div>

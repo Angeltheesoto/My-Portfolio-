@@ -2,20 +2,20 @@ import "./svg.css";
 function GitHub() {
   return (
     <svg
-      className="socials"
+      className="socials github"
       xmlns="http://www.w3.org/2000/svg"
       width="46.448"
       height="45.287"
       viewBox="0 0 46.448 45.287"
     >
-      <filter id="change-color">
+      <filter id="github-change-color">
         <feColorMatrix
           color-interpolation-filters="sRGB"
           type="matrix"
-          values=".98 0   0   0   0
-                  0   0  0   0   0
-                  0   0   0  0   0
-                  0   0   0   1   0 "
+          values=".4 0   0   0   0
+                  0   0.27  0   0   0
+                  0   0   0.82  0   0
+                  0   0   0   1.9   0 "
         />
       </filter>
       <path

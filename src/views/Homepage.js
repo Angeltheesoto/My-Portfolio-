@@ -1,19 +1,19 @@
 // Dependencies
-import Container from "react-bootstrap/Container";
+// import Container from "react-bootstrap/Container";
 import React, { useState, useRef, useEffect } from "react";
 import "./Homepage.css";
 
 // Components
-import NavbarEl from "../components/header/nav";
-import Hero from "../components/header/hero";
+// import NavbarEl from "../components/header/nav";
+// import Hero from "../components/header/hero";
 import Lava from "../components/main/Lava";
 import Aboutme from "../components/main/Aboutme";
 import Lava2 from "../components/main/Lava2";
 import Skills from "../components/main/Skills";
 import Education from "../components/main/Education";
 import Projects from "../components/main/Projects";
-import Contact from "../components/footer/Contact";
-import Map from "../components/footer/Map";
+// import Contact from "../components/footer/Contact";
+// import Map from "../components/footer/Map";
 
 function Homepage() {
   const FadeInSection = ({ children }) => {
@@ -48,47 +48,49 @@ function Homepage() {
   };
 
   return (
-    <div className="app-container">
-      <Container>
-        <div className="header-container">
-          <div className="box-container">
-            <NavbarEl />
-            <FadeInSection>
-              <Hero />
-            </FadeInSection>
-          </div>
-          <Lava />
-        </div>
-        <div className="header-container flex-row-reverse">
-          <div className="box-container">
-            <FadeInSection>
-              <Aboutme />
-            </FadeInSection>
-          </div>
-          <Lava2 />
-        </div>
-        <div className="header-container">
+    // <div className="app-container">
+    //   <Container>
+    //     <div className="header-container">
+    //       <div className="box-container">
+    //         <NavbarEl />
+    //         <FadeInSection>
+    //           <Hero />
+    //         </FadeInSection>
+    //       </div>
+    //       <Lava />
+    //     </div>
+    <>
+      <div className="header-container flex-row-reverse">
+        <div className="box-container">
           <FadeInSection>
-            <Skills />
-          </FadeInSection>
-          <FadeInSection>
-            <Education />
+            <Aboutme />
           </FadeInSection>
         </div>
-        <div className="header-container margin-bottom">
-          <div className="box-container">
-            <FadeInSection>
-              <Projects />
-            </FadeInSection>
-          </div>
-          <Lava />
-        </div>
+        <Lava2 />
+      </div>
+      <div className="header-container">
         <FadeInSection>
-          <Contact />
-          <Map />
+          <Skills />
         </FadeInSection>
-      </Container>
-    </div>
+        <FadeInSection>
+          <Education />
+        </FadeInSection>
+      </div>
+      <div className="header-container margin-bottom">
+        <div className="box-container">
+          <FadeInSection>
+            <Projects />
+          </FadeInSection>
+        </div>
+        <Lava />
+      </div>
+    </>
+    /* <FadeInSection>
+        <Contact />
+        <Map />
+      </FadeInSection> */
+    //   </Container>
+    // </div>
   );
 }
 

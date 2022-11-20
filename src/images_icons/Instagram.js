@@ -2,12 +2,22 @@ import "./svg.css";
 function Instagram() {
   return (
     <svg
-      className="socials"
+      className="socials instagram"
       xmlns="http://www.w3.org/2000/svg"
       width="45.297"
       height="45.287"
       viewBox="0 0 45.297 45.287"
     >
+      <filter id="instagram-change-color">
+        <feColorMatrix
+          color-interpolation-filters="sRGB"
+          type="matrix"
+          values=".98 0   0   0   0
+                  0   0  0   0   0
+                  0   0   0  0   0
+                  0   0   0   1   0 "
+        />
+      </filter>
       <path
         id="Icon_awesome-instagram"
         data-name="Icon awesome-instagram"

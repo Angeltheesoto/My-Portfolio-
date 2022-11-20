@@ -2,12 +2,22 @@ import "./svg.css";
 function LinkedIn() {
   return (
     <svg
-      className="socials"
+      className="socials linkedin"
       xmlns="http://www.w3.org/2000/svg"
       width="45.287"
       height="45.287"
       viewBox="0 0 45.287 45.287"
     >
+      <filter id="linkedin-change-color">
+        <feColorMatrix
+          color-interpolation-filters="sRGB"
+          type="matrix"
+          values="0 0   0   0   0
+                  0   0.47  0   0   0
+                  0   0   0.71  0   0
+                  0   0   0   1   0 "
+        />
+      </filter>
       <path
         id="Icon_awesome-linkedin"
         data-name="Icon awesome-linkedin"

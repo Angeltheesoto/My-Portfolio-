@@ -8,8 +8,18 @@
   width: 2rem;
 }
 
-.socials:hover {
-  filter: url(#change-color);
+.github:hover {
+  filter: url(#github-change-color);
+  transition: 1s;
+}
+
+.linkedin:hover {
+  filter: url(#linkedin-change-color);
+  transition: 1s;
+}
+
+.instagram:hover {
+  filter: url(#instagram-change-color);
   transition: 1s;
 }
 

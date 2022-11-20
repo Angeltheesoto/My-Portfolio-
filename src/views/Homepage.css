@@ -14,9 +14,15 @@
 }
 
 .margin-bottom {
-  margin-bottom: 4rem;
+  /* margin-bottom: 10rem; */
   display: flex;
   flex-direction: column-reverse;
+}
+
+@media screen and (min-width: 997px) {
+  .margin-bottom {
+    margin-bottom: 10rem;
+  }
 }
 
 @media screen and (min-width: 992px) {
